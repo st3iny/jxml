@@ -40,7 +40,7 @@ public class XDocument {
 		return parse(new File(path));
 	}
 
-	private static XDocument parse(File file) throws ParserConfigurationException, SAXException, IOException, DOMException, XException {
+	public static XDocument parse(File file) throws ParserConfigurationException, SAXException, IOException, DOMException, XException {
 		if (!file.exists())
 			throw new FileNotFoundException("The specified XML document wasn't found!");
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
